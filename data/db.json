@@ -1,0 +1,80 @@
+{
+    "clientes": [
+      {
+        "ID_Cliente": "001",
+        "Nombre_Cliente": "Luis Guillermo Pardo",
+        "Fecha_Nacimiento": "1985-02-15",
+        "Número_Documento": "123456789",
+        "Teléfono_Contacto": "3001234567",
+        "Correo_Electrónico": "luis.pardo@example.com",
+        "Monto_Deuda": 500.0,
+        "Fecha_Vencimiento": "2024-12-15",
+        "Estado_Cuenta": "En mora",
+        "Historial_Pagos": [
+          {"Fecha": "2023-06-01", "Monto": 200.0},
+          {"Fecha": "2024-01-10", "Monto": 150.0}
+        ]
+      },
+      {
+        "ID_Cliente": "002",
+        "Nombre_Cliente": "María Fernanda González",
+        "Fecha_Nacimiento": "1990-07-22",
+        "Número_Documento": "987654321",
+        "Teléfono_Contacto": "3107654321",
+        "Correo_Electrónico": "maria.gonzalez@example.com",
+        "Monto_Deuda": 750.0,
+        "Fecha_Vencimiento": "2024-11-30",
+        "Estado_Cuenta": "Pendiente",
+        "Historial_Pagos": [
+          {"Fecha": "2024-05-10", "Monto": 100.0},
+          {"Fecha": "2024-08-15", "Monto": 200.0}
+        ]
+      },
+      {
+        "ID_Cliente": "003",
+        "Nombre_Cliente": "Carlos Andrés Ramírez",
+        "Fecha_Nacimiento": "1978-03-30",
+        "Número_Documento": "654321987",
+        "Teléfono_Contacto": "3209876543",
+        "Correo_Electrónico": "carlos.ramirez@example.com",
+        "Monto_Deuda": 1200.0,
+        "Fecha_Vencimiento": "2025-01-20",
+        "Estado_Cuenta": "En mora",
+        "Historial_Pagos": [
+          {"Fecha": "2023-09-05", "Monto": 300.0},
+          {"Fecha": "2024-03-10", "Monto": 400.0}
+        ]
+      },
+      {
+        "ID_Cliente": "004",
+        "Nombre_Cliente": "Ana Sofía Martínez",
+        "Fecha_Nacimiento": "1988-11-12",
+        "Número_Documento": "456789123",
+        "Teléfono_Contacto": "3012345678",
+        "Correo_Electrónico": "ana.martinez@example.com",
+        "Monto_Deuda": 300.0,
+        "Fecha_Vencimiento": "2024-10-05",
+        "Estado_Cuenta": "Pagada",
+        "Historial_Pagos": [
+          {"Fecha": "2024-01-05", "Monto": 150.0},
+          {"Fecha": "2024-07-10", "Monto": 150.0}
+        ]
+      },
+      {
+        "ID_Cliente": "005",
+        "Nombre_Cliente": "José Luis Torres",
+        "Fecha_Nacimiento": "1995-05-18",
+        "Número_Documento": "321654987",
+        "Teléfono_Contacto": "3156781234",
+        "Correo_Electrónico": "jose.torres@example.com",
+        "Monto_Deuda": 850.0,
+        "Fecha_Vencimiento": "2025-02-28",
+        "Estado_Cuenta": "Pendiente",
+        "Historial_Pagos": [
+          {"Fecha": "2024-04-01", "Monto": 250.0},
+          {"Fecha": "2024-09-15", "Monto": 300.0}
+        ]
+      }
+    ]
+  }
+  
