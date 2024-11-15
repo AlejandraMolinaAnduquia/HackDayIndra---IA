@@ -1,15 +1,21 @@
-# main.py
-import os
-from chain.chatbot import initialize_chatbot
+from audio.audio import GrabadoraDeVoz
 
-# Token de Mistral
-mistral_token = os.environ.get("MISTRAL_API_KEY")
+def main():
+    # Instanciamos la clase GrabadoraDeVoz
+    grabadora = GrabadoraDeVoz()  # Puedes pasar otros parámetros si lo necesitas, como el umbral de silencio o la duración
 
-# Inicializa el chatbot
-chatbot = initialize_chatbot(mistral_token)
+    # Grabar audio
+    archivo_wav = grabadora.grabar_audio()
 
-# Prueba el chatbot enviando un mensaje de ejemplo
-mensaje = "¿como estas?"
-respuesta = chatbot(mensaje)
+    # Reconocer el texto del audio
+    texto = grabadora.reconocer_voz()
 
-print("Bot:", respuesta)
+    if texto:
+        # Imprimir el texto reconocido
+        print("Texto reconocido:", texto)
+
+    # Convertir y guardar el archivo en formato MP3
+    archivo_mp3 = grabadora.convertir_a_mp3()
+
+if __name__ == "__main__":
+    main()
