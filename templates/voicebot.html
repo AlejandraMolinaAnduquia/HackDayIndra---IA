@@ -12,23 +12,24 @@
         <div class="section">
             <h2>Información del Cliente</h2>
             <div class="client-info">
-                <select class="client-select">
-                    <option value="Luis Guillermo Pardo">Luis Guillermo Pardo</option>
-                    
-
+                <!-- Selector de Cliente -->
+                <select id="clienteSelect" class="client-select">
+                    <option value="">Seleccione un cliente</option>
                 </select>
-                <p><strong>Nombre:</strong> Luis Guillermo Pardo</p>
-                <p><strong>Tipología:</strong> Jurídica</p>
-                <p><strong>Deuda:</strong> 100</p>
+                <!-- Información del Cliente Seleccionado -->
+                <div id="clienteInfo">
+                    <p><strong>Nombre:</strong> <span id="nombreCliente">Seleccione un cliente</span></p>
+                    <p><strong>Deuda:</strong> <span id="deudaCliente"></span></p>
+                </div>
             </div>
         </div>
 
         <!-- Interacción con el Cliente -->
         <div class="section">
             <h2>Interacción con el Cliente</h2>
-            <button class="btn primary">Conversar con un Agente</button>
+            <button class="btn primary" onclick="iniciarConversacion()">Conversar con un Agente</button>
             <div class="chat-box">
-                <p><strong>Emma:</strong> Hola Luis Guillermo Pardo, un gusto en saludarlo. Le habla Emma, asistente virtual de Indra. Lo estoy llamando para que podamos conversar sobre el vencimiento de su factura por un monto de 100 Pesos Colombianos.</p>
+                <p><strong>Emma:</strong> Hola, un gusto en saludarlo. Le habla Emma, asistente virtual de Indra.</p>
             </div>
             <div class="controls">
                 <button class="btn danger">Detener Interacción</button>
@@ -59,7 +60,6 @@
             </div>
         </div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

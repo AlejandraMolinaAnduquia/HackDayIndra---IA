@@ -1,15 +1,13 @@
-# main.py
-import os
-from chain.chatbot import initialize_chatbot
+from flask import Flask, request, jsonify
+from chain.prompt_handler import procesar_mensaje
 
-# Token de Mistral
-mistral_token = os.environ.get("MISTRAL_API_KEY")
+app = Flask(__name__)
 
-# Inicializa el chatbot
-chatbot = initialize_chatbot(mistral_token)
+@app.route('/api/cobranza', methods=['POST'])
+def cobrar():
+    datos = request.get_json()
+    respuesta = procesar_mensaje(datos)
+    return jsonify({"respuesta": respuesta})
 
-# Prueba el chatbot enviando un mensaje de ejemplo
-mensaje = "¿como estas?"
-respuesta = chatbot(mensaje)
-
-print("Bot:", respuesta)
+if __name__ == '__main__':
+    app.run(debug=True)
