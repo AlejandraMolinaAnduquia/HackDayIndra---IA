@@ -1,18 +1,15 @@
-from flask import Flask, render_template, request
+# main.py
+import os
 from chain.chatbot import initialize_chatbot
 
-app = Flask(__name__)
-bot = initialize_chatbot()
+# Token de Mistral
+mistral_token = os.environ.get("MISTRAL_API_KEY")
 
-@app.route("/")
-def home():
-    return render_template("index.html")
+# Inicializa el chatbot
+chatbot = initialize_chatbot(mistral_token)
 
-@app.route("/chat", methods=["POST"])
-def chat():
-    user_input = request.json.get("message")
-    response = bot.ask(user_input)
-    return {"response": response}
+# Prueba el chatbot enviando un mensaje de ejemplo
+mensaje = "¿como estas?"
+respuesta = chatbot(mensaje)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+print("Bot:", respuesta)
